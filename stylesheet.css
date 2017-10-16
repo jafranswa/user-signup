@@ -1,0 +1,16 @@
+label {
+  float: left;
+  display: block;
+}
+.group {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.infotext {
+  display: inline-block;
+}
+
+.error {
+  color: blue;
+}

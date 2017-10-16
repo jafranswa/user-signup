@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/add_user" method= "POST" >
+   <div class='group'> 
+    <label>
+        Username
+        <input type="text" name="new-user" value= "{{ request.form['new-user']}}"/>
+        <span class = 'error'>{{user_name_error}}</span> 
+    </label>   
+        </br> </br> <!--cant be empty-->
+    <label> 
+        password
+        <input = type='password' name='password'/>        
+        <span class = "error">{{password_error}}</span>
+    </label>
+</br> </br>
+    <label>
+        confirm password
+        <input type='password' name = 'confirm-password'/>
+    </label>
+    <span class = 'error'>{{passmatch_error}}</span> <!--confirm password must match password-->
+</br></br>
+    <label>
+        User Email (optional)
+        <input ='text' name= 'email'/>
+    </label>
+    <span class = 'error'>{{email_error}}</span>  <!--a single @, a single ., contains no spaces, and is between 3 and 20 characters-->
+</br></br>
+    <input type="submit"/>
+    </div>  
+</form>
+
+{% endblock %}
+
